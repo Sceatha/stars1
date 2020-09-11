@@ -1,0 +1,17 @@
+#library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(dslabs)
+data(stars)
+options(digits = 3)
+
+mean(stars$magnitude)
+sd(stars$magnitude)
+head(stars)
+
+stars %>% ggplot(aes(magnitude)) + geom_density()
+stars %>% ggplot(aes(temp)) + geom_density()
+
+stars %>% ggplot(aes(temp, magnitude, label = star)) + geom_point() + scale_x_log10() + scale_y_reverse() + geom_text(nudge_y = 1)
+
+stars %>% ggplot(aes(temp, magnitude, color = type)) + geom_point() + scale_x_log10() + scale_y_reverse()

@@ -1,0 +1,9 @@
+{
+    "path" : "~/Projects/astronomy/stars1/rda",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}
